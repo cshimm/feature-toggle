@@ -1,23 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import {FeatureToggle} from "./components/FeatureToggle";
 
 function App() {
+    const binaryRand = () => Math.floor(Math.random() * 2);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <FeatureToggle isEnabled={binaryRand()} featureName="FeatureName1" />
+      <FeatureToggle isEnabled={binaryRand()} featureName="FeatureName2" />
+      <FeatureToggle isEnabled={binaryRand()} featureName="FeatureName3" />
+      <FeatureToggle isEnabled={binaryRand()} featureName="FeatureName4" />
     </div>
   );
 }
